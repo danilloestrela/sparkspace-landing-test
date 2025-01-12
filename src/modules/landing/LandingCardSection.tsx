@@ -34,7 +34,7 @@ import { LandingCard } from "./LandingCard/LandingCard"
                     title: "Import Essays",
                     alt: "Import Essays",
                 },
-                content: <p>Import Essays</p>
+                content: <ImportEssayContent />
             },
             {
                 props: {
@@ -42,7 +42,7 @@ import { LandingCard } from "./LandingCard/LandingCard"
                     title: "Use Your Rubric",
                     alt: "Use Your Rubric",
                 },
-                content: <p>Use Your Rubric</p>
+                content: <UseYourRubricContent />
             }
         ]
 
@@ -65,23 +65,17 @@ const CANNED_FEEDBACK =
     "**Summary Evaluation Against Rubric: Accuracy (10/10):** The essay presents accurate information about Abraham Lincoln's life, presidency, and significant contributions, including key events like his election, the Civil..."
 
 const AiFeedbackContent = () => {
-    const [typeIsOver, setTypeIsOver] = useState(false)
     const [text, ] = useTypewriter({
         words: [CANNED_FEEDBACK],
         loop: 1,
         typeSpeed: 20,
         onLoopDone: () => {
             console.log("done")
-            setTypeIsOver(true)
         }
     })
 
-    if(typeIsOver) {
-        return <ReactMarkdown children={CANNED_FEEDBACK} />
-    }
-
     return (
-        <p className="w-full">{text}</p>
+        <ReactMarkdown>{text}</ReactMarkdown>
     )
 }
 
@@ -134,3 +128,10 @@ const AiDetectionContent = ({desiredProgressPercentage, title }: {desiredProgres
     );
 };
 
+const ImportEssayContent = () => {
+    return <p>Import Essays</p>
+}
+
+const UseYourRubricContent = () => {
+    return <p>Use Your Rubric</p>
+}
