@@ -1,8 +1,8 @@
+import CopyPasteIcon from "@/assets/modules/landing/copy-paste-icon.svg"
 import GoogleClassroomIcon from "@/assets/modules/landing/google-classroom.svg"
 import GradedPaperIcon from "@/assets/modules/landing/paper.svg"
 import RubricIcon from "@/assets/modules/landing/rubric.svg"
 import WarningIcon from "@/assets/modules/landing/warning.svg"
-
 import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
 import { useTypewriter } from "react-simple-typewriter"
@@ -133,5 +133,10 @@ const ImportEssayContent = () => {
 }
 
 const UseYourRubricContent = () => {
-    return <p>Use Your Rubric</p>
+    return (
+        <div className="flex flex-col gap-2 text-sm">
+            <p>Use your own rubric by uploading it or copy paste it!</p>
+            <img src={CopyPasteIcon} alt="Copy Paste Icon" className="w-8 h-8" />
+        </div>
+    )
 }
