@@ -58,9 +58,9 @@ const CANNED_FEEDBACK =
     }
 
     return (
-        <div className="mx-auto mt-10 flex max-w-[1000px] flex-wrap justify-center gap-4">
+        <section className="mx-auto mt-10 flex max-w-[1000px] flex-wrap justify-center gap-4">
             {renderCards()}
-        </div>
+        </section>
     )
 }
 
