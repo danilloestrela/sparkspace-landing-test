@@ -8,9 +8,6 @@ import ReactMarkdown from "react-markdown"
 import { useTypewriter } from "react-simple-typewriter"
 import { LandingCard } from "./LandingCard/LandingCard"
 
-const CANNED_FEEDBACK =
-    "**Summary Evaluation Against Rubric: Accuracy (10/10):** The essay presents accurate information about Abraham Lincoln's life, presidency, and significant contributions, including key events like his election, the Civil..."
-
     export const LandingCardSection = () => {
 
         const cardsContent = [
@@ -63,6 +60,9 @@ const CANNED_FEEDBACK =
         </section>
     )
 }
+
+const CANNED_FEEDBACK =
+    "**Summary Evaluation Against Rubric: Accuracy (10/10):** The essay presents accurate information about Abraham Lincoln's life, presidency, and significant contributions, including key events like his election, the Civil..."
 
 const AiFeedbackContent = () => {
     const [typeIsOver, setTypeIsOver] = useState(false)
